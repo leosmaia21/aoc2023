@@ -1,14 +1,12 @@
 
 
-# ret = 0
-# with open("data") as file:
-#   for line in file:
-#     first = [x for x in line if x.isdigit()][0]
-#     last = [x for x in line if x.isdigit()][-1]
-#     ret += int(first + last)
-#
-#
-# print(ret)
+ret = 0
+with open("data") as file:
+  for line in file:
+    first = [x for x in line if x.isdigit()][0]
+    last = [x for x in line if x.isdigit()][-1]
+    ret += int(first + last)
+print(ret)
 
 data = "teste"
 data = "data"
