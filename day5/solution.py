@@ -1,6 +1,6 @@
-
-file = "data"
+from tqdm import tqdm
 file = "teste"
+file = "data"
 
 
 seeds = []
@@ -20,11 +20,11 @@ with open(file) as f:
 
 oldSeeds = seeds
 min = 9223372036854775807
-for groupIndex in (range(0, len(oldSeeds), 2)):
+for groupIndex in tqdm(range(0, len(oldSeeds), 2)):
   start = oldSeeds[groupIndex]
   range_ = oldSeeds[groupIndex + 1]
 
-  for seed in (range(start, start + range_)):
+  for seed in tqdm(range(start, start + range_)):
     for block in data:
       for line in block:
           if seed >= line[1] and seed < line[1] + line[2]:
